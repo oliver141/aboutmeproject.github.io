@@ -1,0 +1,96 @@
+<html>
+
+<head>
+
+    <meta charset="utf8">
+    <link rel="stylesheet" href="/css/site.css">
+
+    <title>The About Me Site</title>
+</head>
+
+<body>
+
+    <div id="main-container">
+
+
+        <header>
+            <h1>About Me</h1>
+
+        </header>
+
+        <div class="row">
+            <nav class="left" style="background-color:#bbb;">
+                <h2>Menu</h2>
+                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Filter..."
+                    title="Type in a category">
+                <ul id="myMenu">
+                    <li><a href="/childPages/hobbies.html">Hobbies</a></li>
+                    <li><a href="/childPages/basicinfo.html">Basic Information</a></li>
+                    <li><a href="/childPages/favourites.html">Favourites</a></li>
+
+
+                </ul>
+            </nav>
+
+            <section class="right" style="background-color:#ddd;">
+                <h2>A website about me</h2>
+                <p>My name is Oliver, this is a computer science project I made, enjoy.</p>
+                <p>(Lorem ipsum left in for aesthetic purposes)</p>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                    commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                    molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+
+
+
+                </p>
+                <p>Duis in ipsum ac sapien aliquet consequat. Mauris molestie felis quis nisi ultrices faucibus. Nam
+                    facilisis efficitur volutpat. Mauris semper, nibh in placerat scelerisque, dui nisi aliquam arcu, in
+                    aliquet sem justo et justo. Nullam sed orci vitae orci malesuada volutpat quis eu turpis. Nullam
+                    lectus augue, iaculis sed efficitur ut, feugiat sed quam. Nunc pulvinar, ligula scelerisque bibendum
+                    sagittis, mi orci malesuada lorem, nec auctor urna ante ut ex. Donec ac felis sit amet lorem
+                    dignissim imperdiet. Donec vel orci dapibus, suscipit metus in, sagittis dui. Pellentesque nisi
+                    ante, tincidunt quis blandit et, fermentum egestas magna. Nulla eros ipsum, aliquet vel pretium vel,
+                    varius ut eros. In orci lacus, facilisis et maximus non, vestibulum vel velit. Phasellus nec elit
+                    sed nulla varius blandit. Quisque egestas, magna vitae pretium scelerisque, arcu ex elementum
+                    sapien, id accumsan orci felis ut nisi. Nam viverra consequat enim, et consequat nibh pellentesque
+                    a. Sed gravida lacus sit amet dolor ultrices, a congue turpis dignissim.
+
+                </p>
+
+
+            </section>
+
+        </div>
+        <footer>
+            <p> Made by Oliver Johnson <sup>&reg;</sup></p>
+        </footer>
+    </div>
+
+
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

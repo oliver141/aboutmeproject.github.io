@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="/css/site.css">
+    <title>My Hobbies</title>
+</head>
+
+<body>
+
+    <div id="main-container">
+
+
+        <header class="header">
+            <h1>Hobbies</h1>
+
+        </header>
+
+
+        <div class="row">
+            <nav class="left" style="background-color:#bbb;">
+                <h2>Menu</h2>
+                <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Filter..."
+                    title="Type in a category">
+                <ul id="myMenu">
+                    <li><a href="/childPages/hobbies.html">Hobbies</a></li>
+                    <li><a href="/childPages/basicinfo.html">Basic Information</a></li>
+                    <li><a href="/childPages/favourites.html">Favourites</a></li>
+                    <li><a href="/index.html">Home</a></li>
+
+
+                </ul>
+            </nav>
+
+            <section class="right" style="background-color:#ddd;">
+                <article>
+                    <h2> Hobbies</h2>
+                    <p>My hobbies include working out, writing, art, shooting sports, and programming.</p>
+                    <p>Someone who inspires me to workout is CBUM (Chris Bumstead)</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zzEcYg0AjLI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </article>
+            </section>
+        </div>
+
+        <footer>
+            <p> Made by Oliver Johnson <sup>&reg;</sup></p>
+        </footer>
+    </div>
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
